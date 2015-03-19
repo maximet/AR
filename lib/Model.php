@@ -1300,6 +1300,10 @@ class Model
 
         $filteredAttributes = array();
 
+        if(!is_array($attributes) || !count($attributes)) {
+            return array();
+        }
+
         foreach($attributes as $name => $value) {
             // is a normal field on the table
             if(!array_key_exists($name, $table->columns)) {
