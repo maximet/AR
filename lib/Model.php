@@ -1291,7 +1291,7 @@ class Model
      * @param array $attributes the attributes as an associative array
      * @return array the filtered attributes
      */
-    public static function filter_attributes(array &$attributes) {
+    public static function filter_attributes(&$attributes) {
         //access uninflected columns since that is what we would have in result set
         $table = static::table();
         $use_attr_accessible = !empty(static::$attr_accessible);
